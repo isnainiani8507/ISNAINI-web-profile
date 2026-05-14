@@ -18,7 +18,7 @@
         .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link { color: #000 !important; }
         .ftco-navbar-light.scrolled .navbar-brand { color: #000 !important; }
 
-        .hero-wrap { height: 400px; background: #b1b493; position: relative; overflow: hidden; }
+        .hero-wrap { height: 90px; background: #b1b493; position: relative; overflow: hidden; }
         .hero-wrap::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.08), transparent 50%),
@@ -73,14 +73,6 @@
       <ul class="circles">
         <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
       </ul>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" style="padding-top: 80px;">
-          <div class="col-md-8 ftco-animate text-center">
-            <h1 class="mb-3 bread" style="color: white; font-weight: 700;">My Interests</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="/#home-section" style="color: rgba(255,255,255,0.8);">Home <i class="fa fa-chevron-right"></i></a></span> <span style="color: rgba(255,255,255,0.5);">Interests <i class="fa fa-chevron-right"></i></span></p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="ftco-section bg-light">

@@ -416,30 +416,151 @@
       .btn-primary { transition: all 0.3s ease; }
       .btn-primary:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
       .btn-primary:active { transform: translateY(0) scale(1); box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
+      
+      .academic-card { 
+        border-radius: 24px; 
+        border: 1px solid rgba(177, 180, 147, 0.4); 
+        background-color: #f1f2eb; 
+        background-image: 
+            radial-gradient(circle at 100% 0%, rgba(177, 180, 147, 0.5) 0%, transparent 60%),
+            radial-gradient(circle at 0% 100%, rgba(177, 180, 147, 0.3) 0%, transparent 60%);
+        position: relative; 
+        overflow: hidden; 
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+      }
+      .academic-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #b1b493, #8f9273); opacity: 0; transition: opacity 0.3s; }
+      .academic-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(177, 180, 147, 0.2) !important; border-color: #8f9273; }
+      .academic-card:hover::before { opacity: 1; }
+      .academic-icon-box { width: 55px; height: 55px; border-radius: 15px; background: linear-gradient(135deg, #ffffff, #f1f3f5); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: transform 0.5s; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+      .academic-card:hover .academic-icon-box { transform: rotate(10deg) scale(1.1); background: linear-gradient(135deg, #b1b493, #8f9273); }
+      .academic-card:hover .academic-icon-box i { color: #fff !important; }
+      
+      /* Alternating Timeline Styles */
+      .timeline-container { position: relative; width: 100%; max-width: 900px; margin: 0 auto; padding: 20px 0; }
+      .timeline-container::after { content: ''; position: absolute; width: 4px; background-color: #d3d5bd; top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+      
+      .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+      .timeline-item.left { left: 0; }
+      .timeline-item.right { left: 50%; }
+      
+      .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: #f8f9fa; border: 4px solid #b1b493; top: 25px; border-radius: 50%; z-index: 1; transition: all 0.3s; }
+      .timeline-item.right::after { left: -10px; }
+      
+      .timeline-card { border-radius: 12px; background: #f6f7f2; border: 1px solid #e2e4d5; position: relative; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+      .timeline-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(177, 180, 147, 0.2); border-color: #b1b493; }
+      .timeline-item:hover::after { background-color: #b1b493; transform: scale(1.3); }
+
+      /* Khaki color for Left Cards */
+      .timeline-item.left .timeline-card { background-color: #b1b493; border-color: #8f9273; }
+      .timeline-item.left .timeline-card h3 { color: #ffffff !important; }
+      .timeline-item.left .timeline-card h5 { color: #f1f3f5 !important; }
+      .timeline-item.left .timeline-card p, .timeline-item.left .timeline-card i { color: #e9ecef !important; }
+      .timeline-item.left .timeline-card .rounded-pill { background: rgba(255, 255, 255, 0.2) !important; color: #ffffff !important; }
+
+      /* Responsive Timeline for Mobile */
+      @media screen and (max-width: 768px) {
+        .timeline-container::after { left: 31px; }
+        .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+        .timeline-item.right { left: 0; }
+        .timeline-item.left::after, .timeline-item.right::after { left: 21px; }
+      }
     </style>
+
+    <section class="ftco-section" id="academic-profile-section" style="background-color: #f8f9fa;">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <span class="subheading" style="color: #b1b493;">CURRENT STATUS</span>
+            <h2 class="mb-4">Current Academic Profile</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Kampus & Prodi -->
+          <div class="col-md-6 mb-4 ftco-animate">
+            <div class="academic-card shadow-sm p-4 h-100 d-flex flex-column">
+              <div class="academic-icon-box shadow-sm">
+                <i class="fa fa-university" style="font-size: 26px; color: #b1b493; transition: color 0.3s;"></i>
+              </div>
+              <h3 class="h5 font-weight-bold mb-3 text-dark">Informasi Kampus</h3>
+              <h4 class="h6 mb-2" style="color: #b1b493; font-weight: 700; letter-spacing: 0.5px; font-size: 15px;">POLITEKNIK INDONUSA SURAKARTA</h4>
+              <p class="text-muted mb-4" style="font-size: 14px;"><i class="fa fa-map-marker mr-2" style="color: #b1b493;"></i> Kampus 1, Surakarta, Jawa Tengah</p>
+              <div class="mt-auto pt-3" style="border-top: 1px dashed #ced4da;">
+                <p class="mb-1 text-muted small text-uppercase font-weight-bold" style="letter-spacing: 1px;">Program Studi</p>
+                <p class="text-dark font-weight-bold mb-0" style="font-size: 16px;">Teknologi Rekayasa Perangkat Lunak</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Semester & IPK -->
+          <div class="col-md-6 mb-4 ftco-animate">
+            <div class="academic-card shadow-sm p-4 h-100 d-flex flex-column">
+              <div class="academic-icon-box shadow-sm">
+                <i class="fa fa-line-chart" style="font-size: 26px; color: #b1b493; transition: color 0.3s;"></i>
+              </div>
+              <h3 class="h5 font-weight-bold mb-3 text-dark">Pencapaian Akademik</h3>
+              <p class="text-muted mb-4" style="font-size: 14px;">Status dan hasil studi terakhir saat ini.</p>
+              <div class="row mt-auto position-relative z-index-1">
+                <div class="col-6">
+                  <div class="p-3 text-center h-100" style="background: linear-gradient(135deg, #b1b493 0%, #8f9273 100%); border: none; box-shadow: 0 10px 20px rgba(177, 180, 147, 0.3); border-radius: 16px; color: #fff; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 25px rgba(177, 180, 147, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 20px rgba(177, 180, 147, 0.3)';">
+                    <span class="d-block small text-uppercase font-weight-bold mb-1" style="color: rgba(255,255,255,0.8); letter-spacing: 1px;">Semester</span>
+                    <span class="font-weight-bold mb-0" style="font-size: 28px; line-height: 1; color: #fff;">4</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 text-center h-100" style="background: linear-gradient(135deg, #2E8B57 0%, #226b43 100%); border: none; box-shadow: 0 10px 20px rgba(46, 139, 87, 0.3); border-radius: 16px; color: #fff; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 25px rgba(46, 139, 87, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 20px rgba(46, 139, 87, 0.3)';">
+                    <span class="d-block small text-uppercase font-weight-bold mb-1" style="color: rgba(255,255,255,0.8); letter-spacing: 1px;">IPK (Smt 3)</span>
+                    <span class="font-weight-bold mb-0" style="font-size: 28px; line-height: 1; color: #fff;">3.84</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mata Kuliah Relevan -->
+          <div class="col-md-12 ftco-animate">
+            <div class="academic-card shadow-sm p-4">
+              <div class="d-flex align-items-center mb-3 pb-3" style="border-bottom: 1px dashed #ced4da;">
+                <div class="academic-icon-box shadow-sm mb-0 mr-3" style="width: 45px; height: 45px;">
+                  <i class="fa fa-book" style="font-size: 20px; color: #b1b493; transition: color 0.3s;"></i>
+                </div>
+                <h3 class="h5 font-weight-bold mb-0 text-dark">Mata Kuliah Relevan Saat Ini</h3>
+              </div>
+              <div class="d-flex flex-wrap justify-content-center pt-2">
+                <span class="badge badge-pill badge-light border px-4 py-2 m-2 shadow-sm" style="font-size: 13px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#b1b493'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#212529';"><i class="fa fa-code mr-2" style="color: inherit;"></i>Pemrograman Web</span>
+                <span class="badge badge-pill badge-light border px-4 py-2 m-2 shadow-sm" style="font-size: 13px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#b1b493'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#212529';"><i class="fa fa-mobile mr-2" style="color: inherit;"></i>Pemrograman Perangkat Bergerak</span>
+                <span class="badge badge-pill badge-light border px-4 py-2 m-2 shadow-sm" style="font-size: 13px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#b1b493'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#212529';"><i class="fa fa-cogs mr-2" style="color: inherit;"></i>Kecerdasan Buatan</span>
+                <span class="badge badge-pill badge-light border px-4 py-2 m-2 shadow-sm" style="font-size: 13px; font-weight: 500; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#b1b493'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#212529';"><i class="fa fa-tasks mr-2" style="color: inherit;"></i>Manajemen Proyek Perangkat Lunak</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="ftco-section" id="education-section">
       <div class="container">
         <div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <span class="subheading">MY ACADEMIC JOURNEY</span>
-            <h2 class="mb-4">Riwayat Pendidikan</h2>
+            <span class="subheading" style="color: #b1b493;">MY ACADEMIC JOURNEY</span>
+            <h2 class="mb-4"> Educational background</h2>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-10">
-            <div style="border-left: 3px solid #2E8B57; padding-left: 30px; position: relative;">
-            @foreach ($educations as $edu)
-              <div class="bg-white rounded-lg shadow p-4 mb-4 ftco-animate" style="position: relative;">
-                <div style="position: absolute; width: 20px; height: 20px; background: #2E8B57; border-radius: 50%; left: -42px; top: 30px; border: 4px solid #f8f9fa;"></div>
-                <span class="font-weight-bold" style="color: #2E8B57; letter-spacing: 2px;">{{ $edu->start_year }} - {{ $edu->end_year ?? 'Sekarang' }}</span>
-                <h3 class="mt-2">{{ $edu->school_name }}</h3>
-                <h5 class="text-muted">{{ $edu->degree }}</h5>
-                <p class="mt-3 mb-0"><i class="fa fa-map-marker mr-2" style="color: #2E8B57;"></i> {{ $edu->city }}</p>
+        
+        <div class="timeline-container">
+          @foreach ($educations as $index => $edu)
+            <div class="timeline-item {{ $index % 2 == 0 ? 'left' : 'right' }} ftco-animate">
+              <div class="timeline-card p-4">
+                <span class="font-weight-bold px-3 py-1 rounded-pill d-inline-block mb-2" style="background: rgba(177, 180, 147, 0.15); color: #8f9273; letter-spacing: 0.5px; font-size: 12px;">
+                  <i class="fa fa-calendar mr-2"></i>{{ $edu->start_year }} - {{ $edu->end_year ?? 'Sekarang' }}
+                </span>
+                <h3 class="mb-1" style="font-weight: 700; color: #343a40; font-size: 18px;">{{ $edu->school_name }}</h3>
+                <h5 class="text-muted" style="font-size: 14px; font-weight: 500;">{{ $edu->degree }}</h5>
+                <p class="mt-2 mb-0" style="color: #6c757d; font-size: 13px;"><i class="fa fa-map-marker mr-2" style="color: #b1b493;"></i> {{ $edu->city }}</p>
               </div>
-            @endforeach
             </div>
-          </div>
+          @endforeach
         </div>
+
       </div>
     </section>
 
@@ -667,7 +788,7 @@
         <div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
             <span class="subheading">MY INTERESTS</span>
-            <h2 class="mb-4">Bidang yang Sedang Saya Tekuni</h2>
+            <h2 class="mb-4">The Field I'm Currently Working In</h2>
             <p>
               Fokus utama saya saat ini di Teknologi Rekayasa Perangkat Lunak
               adalah mendalami aspek teknis dan kreatif dalam membangun sebuah
@@ -811,6 +932,11 @@
               <div class="text text-center p-4">
                 <h3><a href="#">Personal Portfolio Website</a></h3>
                 <span>WEB DEVELOPMENT</span>
+                <div class="mt-3">
+                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="Check out this project's GitHub repository.">
+                        <i class="fa fa-github" style="font-size: 20px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -823,6 +949,11 @@
               <div class="text text-center p-4">
                 <h3><a href="#"> Student Management App </a></h3>
                 <span>Mobile App Development</span>
+                <div class="mt-3">
+                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="Check out this project's GitHub repository.">
+                        <i class="fa fa-github" style="font-size: 20px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -835,6 +966,11 @@
               <div class="text text-center p-4">
                 <h3><a href="#">Visual Foxpro Project</a></h3>
                 <span>Database Application</span>
+                <div class="mt-3">
+                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                        <i class="fa fa-github" style="font-size: 20px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -847,6 +983,11 @@
               <div class="text text-center p-4">
                 <h3><a href="#">Hestii Henna Booking System</a></h3>
                 <span>FULLSTACK WEB DEVELOPMENT</span>
+                <div class="mt-3">
+                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                        <i class="fa fa-github" style="font-size: 20px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -862,6 +1003,11 @@
               <div class="text text-center p-4">
                 <h3><a href="#">AI Chatbot for Emotional Support</a></h3>
                 <span>PYTHON & NLP</span>
+                <div class="mt-3">
+                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                        <i class="fa fa-github" style="font-size: 20px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -874,6 +1020,11 @@
               <div class="text text-center p-4">
                 <h3><a href="#">Simple AI Prediction Model</a></h3>
                 <span>PYTHON & DATA SCIENCE</span>
+                <div class="mt-3">
+                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                        <i class="fa fa-github" style="font-size: 20px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1061,6 +1212,11 @@
                   Edukasi mengenai pengelolaan keuangan pribadi untuk mencapai
                   tujuan hidup jangka panjang bersama Komunitas TDA Soloraya.
                 </p>
+                <div class="mt-2">
+                    <a href="{{ asset('Sertifikat TDA - Mengelola Keuangan.pdf') }}" target="_blank" class="btn btn-primary btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center; background-color: #b1b493; border-color: #b1b493;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View PDF">
+                        <i class="fa fa-file-pdf-o" style="font-size: 18px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1090,6 +1246,11 @@
                   Mempelajari peran media kreatif dalam perkembangan Teknologi
                   Informasi dan industri otomotif masa kini.
                 </p>
+                <div class="mt-2">
+                    <a href="{{ asset('Seminar Nasional - Peran Media Kreatif otomotif & Informasi.pdf') }}" target="_blank" class="btn btn-primary btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center; background-color: #b1b493; border-color: #b1b493;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View PDF">
+                        <i class="fa fa-file-pdf-o" style="font-size: 18px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1120,6 +1281,11 @@
                   mahasiswa, sekaligus dipercaya mengemban tanggung jawab
                   sebagai Ketua Pelaksana acara.
                 </p>
+                <div class="mt-2">
+                    <a href="{{ asset('SERTIFIKAT PANITIA Pelatihan Public Speaking Character Building - Isnaini Fathul Jannah.pdf') }}" target="_blank" class="btn btn-primary btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center; background-color: #b1b493; border-color: #b1b493;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View PDF">
+                        <i class="fa fa-file-pdf-o" style="font-size: 18px;"></i>
+                    </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1155,23 +1321,27 @@
 
         <div class="row block-9">
           <div class="col-md-8">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form action="#" class="bg-light p-4 p-md-5 contact-form" onsubmit="sendEmail(event)">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <input
                       type="text"
                       class="form-control"
+                      id="senderName"
                       placeholder="Your Name"
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
+                      id="senderEmail"
                       placeholder="Your Email"
+                      required
                     />
                   </div>
                 </div>
@@ -1180,29 +1350,30 @@
                     <input
                       type="text"
                       class="form-control"
+                      id="senderSubject"
                       placeholder="Subject"
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <textarea
-                      name=""
-                      id=""
+                      id="senderMessage"
                       cols="30"
                       rows="7"
                       class="form-control"
                       placeholder="Message"
+                      required
                     ></textarea>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input
+                    <button
                       type="submit"
-                      value="Send Message"
                       class="btn btn-primary py-3 px-5"
-                    />
+                    >Send Message</button>
                   </div>
                 </div>
               </div>
@@ -1403,12 +1574,7 @@
               </li>
             </ul>
             <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              Copyright © 2026 All rights reserved | This website is made with
+               © 2026 This website is made with
               ❤️
               <i aria-hidden="true"></i> by
               <a href="https://colorlib.com" target="_blank">ISNAINI.</a>
@@ -1459,5 +1625,19 @@
     <script src="{{ asset('js/google-map.js') }}"></script>
 
     <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+      function sendEmail(e) {
+        e.preventDefault();
+        var name = document.getElementById('senderName').value;
+        var email = document.getElementById('senderEmail').value;
+        var subject = document.getElementById('senderSubject').value;
+        var message = document.getElementById('senderMessage').value;
+
+        var body = "Hi Isnaini,\n\n" + message + "\n\nDari: " + name + " (" + email + ")";
+        var mailtoLink = "mailto:isnainiani8507@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        
+        window.location.href = mailtoLink;
+      }
+    </script>
   </body>
 </html>

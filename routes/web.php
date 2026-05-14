@@ -8,7 +8,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\CertificationController;
 
 Route::get('/', function () {
-    $educations = DB::table('education_histories')->get();
+    $educations = DB::table('education_histories')->orderBy('start_year', 'desc')->get();
     return view('index', ['educations' => $educations]);
 });
 

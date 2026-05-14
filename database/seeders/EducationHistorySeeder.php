@@ -9,7 +9,15 @@ class EducationHistorySeeder extends Seeder
 {
     public function run()
     {
+        DB::table('education_histories')->truncate();
         DB::table('education_histories')->insert([
+            [
+                'school_name' => 'Politeknik Indonusa Surakarta',
+                'degree' => 'D4 Teknologi Rekayasa Perangkat Lunak',
+                'start_year' => 2024,
+                'end_year' => null,
+                'city' => 'Surakarta'
+            ],
             [
                 'school_name' => 'SMK Negeri 6 Surakarta',
                 'degree' => 'Rekayasa Perangkat Lunak',
@@ -18,11 +26,18 @@ class EducationHistorySeeder extends Seeder
                 'city' => 'Surakarta'
             ],
             [
-                'school_name' => 'Politeknik Indonusa Surakarta',
-                'degree' => 'D4 Teknologi Rekayasa Perangkat Lunak',
-                'start_year' => 2024,
-                'end_year' => null,
+                'school_name' => 'SMP Muhammadiyah 10 Surakarta',
+                'degree' => 'Sekolah Menengah Pertama',
+                'start_year' => 2017,
+                'end_year' => 2020,
                 'city' => 'Surakarta'
+            ],
+            [
+                'school_name' => 'SD Negeri 01 Paulan',
+                'degree' => 'Sekolah Dasar',
+                'start_year' => 2011,
+                'end_year' => 2017,
+                'city' => 'Karanganyar'
             ],
         ]);
     }
