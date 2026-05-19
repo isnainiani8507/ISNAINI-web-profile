@@ -28,7 +28,7 @@ class CertificationSeeder extends Seeder
             'description' => 'Berkontribusi dalam kepanitiaan pelatihan komunikasi mahasiswa, sekaligus dipercaya mengemban tanggung jawab sebagai Ketua Pelaksana acara.', 
             'image' => 'images/sertifikat-3.jpg'],
             ['name' => 'Seminar Nasional: AI For Your Coding Assistant', 
-            'role' => 'Peserta', 'date' => '11 Mei 2026', 
+            'role' => 'Peserta', 'date' => 'Mei 11, 2026', 
             'description' => 'Mengikuti seminar nasional yang diselenggarakan oleh Himpunan Mahasiswa Informatika Universitas Sahid Surakarta mengenai pemanfaatan teknologi AI sebagai asisten pemrograman untuk meningkatkan efisiensi koding.', 
             'image' => 'images/sertifikat-4.jpg'],
         ]);

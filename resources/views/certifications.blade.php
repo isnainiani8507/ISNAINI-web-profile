@@ -50,8 +50,10 @@
             0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 20%; }
             100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
         }
-        .blog-entry { margin-bottom: 40px; }
-        .blog-entry .block-20 { display: block; height: 250px; border-radius: 10px; background-size: cover; background-position: center; }
+        .blog-entry { margin-bottom: 40px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); border: 1px solid transparent; }
+        .blog-entry:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(177, 180, 147, 0.25) !important; border-color: rgba(177, 180, 147, 0.3); }
+        .blog-entry .block-20 { display: block; height: 250px; border-radius: 10px; background-size: cover; background-position: center; transition: filter 0.3s; }
+        .blog-entry:hover .block-20 { filter: brightness(1.05); }
         .blog-entry .text { position: relative; border-top: 0; border-radius: 2px; }
         .blog-entry .text .heading { font-size: 20px; margin-bottom: 16px; font-weight: 500; }
         .blog-entry .text .heading a { color: #000; }
@@ -92,7 +94,7 @@
             <h2 class="mb-4">My Certifications & Participations</h2>
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           @foreach ($certifications as $cert)
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end shadow bg-white p-3 rounded">
