@@ -109,7 +109,7 @@
                 <h3 class="heading"><a href="#">{{ $cert->name }}</a></h3>
                 <p>{{ $cert->description }}</p>
                 <div class="mt-2">
-                    <a href="{{ asset($cert->image) }}" target="_blank" class="btn btn-primary btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center; background-color: #b1b493; border-color: #b1b493;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View PDF">
+                    <a href="{{ $cert->pdf ? asset($cert->pdf) : '#' }}" target="_blank" class="btn btn-primary btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center; background-color: #b1b493; border-color: #b1b493;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View PDF">
                         <i class="fa fa-file-pdf-o" style="font-size: 18px;"></i>
                     </a>
                 </div>
