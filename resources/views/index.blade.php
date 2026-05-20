@@ -115,9 +115,9 @@
                   <p>
                     <a href="#about-section" class="btn btn-primary">Hire me</a>
 
-                    <a href="{{ asset('CV_Isnaini.pdf') }}" 
+                    <a href="{{ asset('ISNAINI_CV.pdf') }}" 
                     class="btn btn-primary btn-outline-primary" 
-                    download="CV_Isnaini_Daulay.pdf">
+                    download="CV_Isnaini.pdf">
                     Download CV
                     </a>
                   </p>
@@ -933,7 +933,7 @@
                 <h3><a href="#">Personal Portfolio Website</a></h3>
                 <span>WEB DEVELOPMENT</span>
                 <div class="mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="Check out this project's GitHub repository.">
+                    <a href="https://github.com/isnainiani8507/ISNAINI-web-profile.git" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="Check out this project's GitHub repository.">
                         <i class="fa fa-github" style="font-size: 20px;"></i>
                     </a>
                 </div>
@@ -950,7 +950,7 @@
                 <h3><a href="#"> Student Management App </a></h3>
                 <span>Mobile App Development</span>
                 <div class="mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="Check out this project's GitHub repository.">
+                    <a href="https://github.com/isnainiani8507/student-crud-app-kodular.git" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="Check out this project's GitHub repository.">
                         <i class="fa fa-github" style="font-size: 20px;"></i>
                     </a>
                 </div>
@@ -967,7 +967,7 @@
                 <h3><a href="#">Visual Foxpro Project</a></h3>
                 <span>Database Application</span>
                 <div class="mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                    <a href="https://github.com/isnainiani8507/student-cash-management-system.git" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
                         <i class="fa fa-github" style="font-size: 20px;"></i>
                     </a>
                 </div>
@@ -984,7 +984,7 @@
                 <h3><a href="#">Hestii Henna Booking System</a></h3>
                 <span>FULLSTACK WEB DEVELOPMENT</span>
                 <div class="mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                    <a href="https://github.com/yunitainesis/hestii_henna.git" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
                         <i class="fa fa-github" style="font-size: 20px;"></i>
                     </a>
                 </div>
@@ -1004,7 +1004,7 @@
                 <h3><a href="#">AI Chatbot for Emotional Support</a></h3>
                 <span>PYTHON & NLP</span>
                 <div class="mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                    <a href="https://github.com/devannoap31/student-emotional-consultation-web-with-AI.git" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
                         <i class="fa fa-github" style="font-size: 20px;"></i>
                     </a>
                 </div>
