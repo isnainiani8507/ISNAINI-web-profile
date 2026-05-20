@@ -16,7 +16,6 @@ return new class extends Migration
         $table->string('name');
         $table->string('category');
         $table->string('image');
-        $table->string('github_link')->nullable();
         $table->timestamps();
     });
     }
