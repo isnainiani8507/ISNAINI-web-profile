@@ -91,14 +91,14 @@
         </div>
         <div class="row">
           @foreach ($projects as $project)
-          <div class="col-md-4">
+          <div class="col-md-4{{ ($loop->last && $loop->count % 3 === 1) ? ' offset-md-4' : '' }}">
             <div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('{{ asset($project->image) }}')">
               <div class="overlay"></div>
               <div class="text text-center p-4">
                 <h3><a href="#">{{ $project->name }}</a></h3>
                 <span>{{ $project->category }}</span>
                 <div class="mt-3">
-                    <a href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
+                    <a href="{{ $project->github_link }}" target="_blank" class="btn btn-outline-light btn-sm rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 40px; height: 40px; transition: transform 0.3s; transform-origin: center;" onmouseover="this.style.transform='scale(1.1) rotate(10deg)'" onmouseout="this.style.transform='scale(1)'" title="View Github Repo">
                         <i class="fa fa-github" style="font-size: 20px;"></i>
                     </a>
                 </div>
