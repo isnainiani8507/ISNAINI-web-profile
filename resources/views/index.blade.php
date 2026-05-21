@@ -169,10 +169,13 @@
                     & Web Enthusiast
                   </h1>
                   <p>
-                    <a href="#" class="btn btn-primary">Hire me</a>
-                    <a href="#" class="btn btn-primary btn-outline-primary"
-                      >Download CV</a
-                    >
+                    <a href="#about-section" class="btn btn-primary">Hire me</a>
+
+                    <a href="{{ asset('ISNAINI_CV.pdf') }}" 
+                    class="btn btn-primary btn-outline-primary" 
+                    download="CV_Isnaini.pdf">
+                    Download CV
+                    </a>
                   </p>
                 </div>
               </div>
