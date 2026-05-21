@@ -26,6 +26,16 @@
 
     <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <style>
+      @media (min-width: 992px) {
+        /* Reduce padding and font-size so the navbar doesn't look crowded */
+        .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+          font-size: 14px !important;
+        }
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <nav
@@ -73,6 +83,11 @@
             <li class="nav-item">
               <a href="#certifications-section" class="nav-link"
                 ><span>Certifications</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#targets-section" class="nav-link"
+                ><span>Targets</span></a
               >
             </li>
             <li class="nav-item">
@@ -1297,6 +1312,164 @@
         </div>
       </div>
     </section>
+
+    <!-- TARGETS START -->
+    <section class="ftco-section bg-primary" id="targets-section">
+      <div class="container">
+        <div class="row justify-content-center pb-3">
+          <div
+            class="col-md-12 heading-section heading-section-white text-center ftco-animate"
+          >
+            <span class="subheading">TARGETS</span>
+            <h2 class="mb-2">Post-Internship Goals</h2>
+            <p>
+              Proyek dan sistem yang ingin saya kembangkan sebagai bentuk penerapan pengalaman serta kemampuan yang diperoleh selama masa magang.
+            </p>
+          </div>
+        </div>
+        
+        <style>
+          .target-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 35px 25px;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .target-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+          }
+          .target-icon {
+            font-size: 36px;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(177, 180, 147, 0.15);
+            color: #b1b493;
+            transition: all 0.4s ease;
+          }
+          .target-card:hover .target-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: #b1b493;
+            color: #fff;
+          }
+          .target-category {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 15px;
+            border-radius: 30px;
+            background-color: rgba(177, 180, 147, 0.2);
+            color: #7b7f58;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+          }
+          .target-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+          }
+          .target-desc {
+            font-size: 14.5px;
+            color: #666;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            line-height: 1.6;
+          }
+          .target-status {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 20px;
+            border-radius: 30px;
+            background-color: rgba(255, 152, 0, 0.15);
+            color: #e67e22;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          .target-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff9800, #ffc107);
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+          .target-card:hover::before {
+            opacity: 1;
+          }
+        </style>
+
+        <div class="row ftco-animate">
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="target-card">
+              <div class="target-icon">
+                <i class="fa fa-map-o"></i>
+              </div>
+              <div class="target-category">🗺️ Information System</div>
+              <h3 class="target-title">Boarding House Finder App</h3>
+              <p class="target-desc">
+                Platform pencarian kost berbasis web khusus wilayah Surakarta. Memudahkan mahasiswa menemukan kost sesuai budget, lokasi, dan fasilitas yang diinginkan.
+              </p>
+              <div class="target-status">
+                <i class="fa fa-clock-o"></i> Planning
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="target-card">
+              <div class="target-icon">
+                <i class="fa fa-money"></i>
+              </div>
+              <div class="target-category">💰 Financial System</div>
+              <h3 class="target-title">Shared Saving Goals App</h3>
+              <p class="target-desc">
+                Aplikasi perencanaan tabungan bersama untuk siapa saja yang memiliki tujuan keuangan yang sama. Buat target, pantau kontribusi setiap anggota, dan raih tujuan bersama lebih terorganisir.
+              </p>
+              <div class="target-status">
+                <i class="fa fa-clock-o"></i> Planning
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="target-card">
+              <div class="target-icon">
+                <i class="fa fa-tasks"></i>
+              </div>
+              <div class="target-category">📚 Academic System</div>
+              <h3 class="target-title">Academic Task Manager App</h3>
+              <p class="target-desc">
+                Sistem manajemen tugas kuliah khusus mahasiswa Indonesia. Dilengkapi reminder deadline, dashboard per mata kuliah, dan tracking progress tugas harian.
+              </p>
+              <div class="target-status">
+                <i class="fa fa-clock-o"></i> Planning
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- TARGETS END -->
 
     <!--contact START-->
     <section
