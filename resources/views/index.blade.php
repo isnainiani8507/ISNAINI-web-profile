@@ -130,9 +130,9 @@
                   <p>
                     <a href="#about-section" class="btn btn-primary">Hire me</a>
 
-                    <a href="{{ asset('ISNAINI_CV.pdf') }}" 
+                    <a href="{{ asset('CV_ISNAINI FATHUL JANNAH.pdf') }}" 
                     class="btn btn-primary btn-outline-primary" 
-                    download="CV_Isnaini.pdf">
+                    download="CV_ISNAINI FATHUL JANNAH.pdf">
                     Download CV
                     </a>
                   </p>
@@ -171,9 +171,9 @@
                   <p>
                     <a href="#about-section" class="btn btn-primary">Hire me</a>
 
-                    <a href="{{ asset('ISNAINI_CV.pdf') }}" 
+                    <a href="{{ asset('CV_ISNAINI FATHUL JANNAH.pdf') }}" 
                     class="btn btn-primary btn-outline-primary" 
-                    download="CV_Isnaini.pdf">
+                    download="CV_ISNAINI FATHUL JANNAH.pdf">
                     Download CV
                     </a>
                   </p>
