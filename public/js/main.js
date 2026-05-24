@@ -41,17 +41,16 @@
 	var burgerMenu = function() {
 
 		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
 			event.preventDefault();
 
-			if ( $('#ftco-nav').is(':visible') ) {
+			var $target = $('#ftco-nav');
+			if ( $target.hasClass('show') ) {
+				$target.collapse('hide');
 				$(this).removeClass('active');
 			} else {
+				$target.collapse('show');
 				$(this).addClass('active');	
 			}
-
-			
-			
 		});
 
 	};
@@ -59,7 +58,6 @@
 
 
 	var onePageClick = function() {
-
 
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
 	    event.preventDefault();
@@ -71,6 +69,13 @@
 	    }, 500, function() {
 	    	// window.location.hash = href;
 	    });
+		
+	    // Auto close navbar on mobile
+	    var navbarCollapse = $('#ftco-nav');
+	    if (navbarCollapse.hasClass('show')) {
+	        navbarCollapse.collapse('hide');
+	        $('.js-fh5co-nav-toggle').removeClass('active');
+	    }
 		});
 
 	};

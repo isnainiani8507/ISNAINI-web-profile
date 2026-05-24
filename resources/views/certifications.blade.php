@@ -10,44 +10,30 @@
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <style>
-        .ftco-navbar-light:not(.scrolled) { background: transparent !important; }
-        .ftco-navbar-light .navbar-nav > .nav-item > .nav-link { color: #fff !important; font-weight: 600; }
-        .ftco-navbar-light .navbar-brand { color: #fff !important; }
-        .ftco-navbar-light .navbar-toggler { color: #fff !important; }
-        .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link { color: #000 !important; }
-        .ftco-navbar-light.scrolled .navbar-brand { color: #000 !important; }
+        
+        .ftco-navbar-light {
+            background: #fff !important;
+            box-shadow: 0 5px 20px -5px rgba(0,0,0,0.1) !important;
+            top: 0 !important;
+        }
+        .ftco-navbar-light .navbar-nav > li > a { color: #000 !important; font-weight: 600; }
+        .ftco-navbar-light .navbar-nav > li > a:hover,
+        .ftco-navbar-light .navbar-nav > li.active > a { color: #b1b493 !important; }
+        .ftco-navbar-light .navbar-brand { color: #000 !important; }
+        .ftco-navbar-light .navbar-brand span { color: #b1b493 !important; }
+        .ftco-navbar-light .navbar-toggler { color: #000 !important; border-color: rgba(0,0,0,0.1) !important; }
+        .ftco-navbar-light .navbar-toggler span { color: #000 !important; }
 
-        .hero-wrap { height: 90px; background: #b1b493; position: relative; overflow: hidden; }
-        .hero-wrap::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.08), transparent 50%),
-                        radial-gradient(circle at 85% 30%, rgba(0, 0, 0, 0.1), transparent 50%);
-            z-index: 0; pointer-events: none;
+        @media (min-width: 992px) {
+            .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                font-size: 14px !important;
+            }
         }
-        .hero-wrap .slider-text { height: 400px; position: relative; z-index: 10; pointer-events: none; }
-        .hero-wrap .slider-text * { pointer-events: auto; }
-        .hero-wrap .bread { font-weight: 800; letter-spacing: -1px; text-shadow: 2px 4px 10px rgba(0,0,0,0.1); color: white !important; }
-        .circles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; z-index: 1; pointer-events: none; }
-        .circles li { 
-            position: absolute; display: block; list-style: none; width: 20px; height: 20px; 
-            background: rgba(255, 255, 255, 0.15); 
-            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
-            animation: animate 25s linear infinite; bottom: -150px; border-radius: 20%; 
-        }
-        .circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
-        .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
-        .circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
-        .circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; background: rgba(255, 255, 255, 0.1); }
-        .circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
-        .circles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; background: rgba(255, 255, 255, 0.2); }
-        .circles li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; background: rgba(0, 0, 0, 0.05); }
-        .circles li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
-        .circles li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; background: rgba(255, 255, 255, 0.2); }
-        .circles li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
-        @keyframes animate {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 20%; }
+
+
+        
             100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
         }
         .blog-entry { margin-bottom: 40px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); border: 1px solid transparent; }
@@ -69,7 +55,7 @@
       <div class="container">
         <a class="navbar-brand" href="/">Isnaini<span>.</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
-          <span class="oi oi-menu"></span> Menu
+          <i class="fa fa-bars"></i> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav nav ml-auto">
@@ -80,13 +66,9 @@
       </div>
     </nav>
 
-    <section class="hero-wrap d-flex align-items-center justify-content-center">
-      <ul class="circles">
-        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-      </ul>
-    </section>
+    
 
-    <section class="ftco-section bg-light">
+    <section class="ftco-section bg-light" style="padding-top: 120px;">
       <div class="container">
         <div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">

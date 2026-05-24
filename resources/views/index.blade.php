@@ -27,6 +27,19 @@
     <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,700&display=swap');
+      
+      .ftco-navbar-light {
+        background: #fff !important;
+        box-shadow: 0 5px 20px -5px rgba(0,0,0,0.1) !important;
+        top: 0 !important;
+      }
+      .ftco-navbar-light .navbar-nav > li > a { color: #000 !important; font-weight: 600; }
+      .ftco-navbar-light .navbar-nav > li > a:hover,
+      .ftco-navbar-light .navbar-nav > li.active > a { color: #b1b493 !important; }
+      .ftco-navbar-light .navbar-brand { color: #000 !important; }
+      .ftco-navbar-light .navbar-brand span { color: #b1b493 !important; }
+
       @media (min-width: 992px) {
         /* Reduce padding and font-size so the navbar doesn't look crowded */
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
@@ -53,7 +66,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="oi oi-menu"></span> Menu
+          <i class="fa fa-bars"></i> Menu
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -62,7 +75,7 @@
               <a href="#home-section" class="nav-link"><span>Home</span></a>
             </li>
             <li class="nav-item">
-              <a href="#about-section" class="nav-link"><span>About</span></a>
+              <a href="#academic-profile-section" class="nav-link"><span>Academic Profile</span></a>
             </li>
             <li class="nav-item">
               <a href="#education-section" class="nav-link"><span>Education</span></a>
@@ -99,187 +112,58 @@
         </div>
       </div>
     </nav>
-    <section id="home-section" class="hero">
-      <div class="home-slider owl-carousel">
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container-fluid px-md-0">
-            <div
-              class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-              data-scrollax-parent="true"
-            >
-              <div
-                class="one-third order-md-last img"
-                style="background-image: url(images/1.jpg)"
-              >
-                <div class="overlay"></div>
-                <div class="overlay-1"></div>
-              </div>
-              <div
-                class="one-forth d-flex align-items-center ftco-animate"
-                data-scrollax=" properties: { translateY: '70%' }"
-              >
-                <div class="text">
-                  <span class="subheading">
-                    Welcome to My Learning Journey!</span
-                  >
-                  <h1 class="mb-4 mt-3">
-                    Hi, I am <span> Isnaini </span>Dedicated to Crafting Quality
-                    Software.
-                  </h1>
-                  <p>
-                    <a href="#about-section" class="btn btn-primary">Hire me</a>
-
-                    <a href="{{ asset('CV_ISNAINI FATHUL JANNAH.pdf') }}" 
-                    class="btn btn-primary btn-outline-primary" 
-                    download="CV_ISNAINI FATHUL JANNAH.pdf">
-                    Download CV
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container-fluid px-md-0">
-            <div
-              class="row d-flex no-gutters slider-text align-items-end justify-content-end"
-              data-scrollax-parent="true"
-            >
-              <div
-                class="one-third order-md-last img"
-                style="background-image: url(images/2.jpg)"
-              >
-                <div class="overlay"></div>
-                <div class="overlay-1"></div>
-              </div>
-              <div
-                class="one-forth d-flex align-items-center ftco-animate"
-                data-scrollax=" properties: { translateY: '70%' }"
-              >
-                <div class="text">
-                  <span class="subheading">
-                    From Logic to User Experience
-                  </span>
-                  <h1 class="mb-4 mt-3">
-                    Software Engineering <span>Student </span>
-                    & Web Enthusiast
-                  </h1>
-                  <p>
-                    <a href="#about-section" class="btn btn-primary">Hire me</a>
-
-                    <a href="{{ asset('CV_ISNAINI FATHUL JANNAH.pdf') }}" 
-                    class="btn btn-primary btn-outline-primary" 
-                    download="CV_ISNAINI FATHUL JANNAH.pdf">
-                    Download CV
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-counter img bg-light" id="section-counter">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-md-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 d-flex">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-suitcase"></span>
-              </div>
-              <div class="text">
-                <strong class="number" data-number="12">0</strong>
-                <span>Projects Completed</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 d-flex">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-loyalty"></span>
-              </div>
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Satisfied Users</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 d-flex">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-coffee"></span>
-              </div>
-              <div class="text">
-                <strong class="number" data-number="99">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-3 justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18 d-flex">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-calendar"></span>
-              </div>
-              <div class="text">
-                <strong class="number" data-number="2">0</strong>
-                <span>Years Learning</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section
-      class="ftco-about ftco-section ftco-no-pt ftco-no-pb"
-      id="about-section"
+      class="ftco-about ftco-section ftco-no-pb hero-new-section"
+      id="home-section"
     >
       <div class="container">
-        <div class="row d-flex no-gutters">
-          <div class="col-md-6 col-lg-5 d-flex">
-            <div class="img-about img d-flex align-items-stretch">
-              <div class="overlay"></div>
-              <div
-                class="img d-flex align-self-stretch align-items-center"
-                style="background-image: url(images/3.jpg)"
-              ></div>
+        <div class="row d-flex no-gutters align-items-center">
+          <div class="col-md-6 col-lg-5 d-flex flex-column justify-content-center align-items-center pt-2 pt-md-0">
+            
+            <div class="interactive-tech-container mb-4">
+              <div class="tech-sphere"></div>
+              <div class="tech-orbit">
+                <div class="orbit-item html-badge"><i class="fa fa-html5"></i></div>
+                <div class="orbit-item css-badge"><i class="fa fa-css3"></i></div>
+                <div class="orbit-item js-badge">JS</div>
+                <div class="orbit-item php-badge">PHP</div>
+              </div>
+              <div class="code-typing-box shadow-lg">
+                <div class="code-header">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="code-body">
+                  <span class="code-line"><span class="keyword">function</span> <span class="func">buildFuture</span>() {</span>
+                  <span class="code-line indent">  <span class="keyword">return</span> <span class="string">"Innovation & Excellence"</span>;</span>
+                  <span class="code-line">}</span>
+                  <span class="code-cursor">_</span>
+                </div>
+              </div>
             </div>
+
+            <div class="action-buttons text-center w-100 mt-4 mb-5 mb-md-0" style="z-index: 10;">
+              <a href="#contact-section" class="btn btn-primary btn-custom py-3 px-4 mr-2 mb-2" style="border-radius: 30px; font-weight: 600; box-shadow: 0 10px 20px rgba(177, 180, 147, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">Hire Me</a>
+              <a href="{{ asset('CV_ISNAINI FATHUL JANNAH.pdf') }}" class="btn btn-custom py-3 px-4 mb-2 text-white" download="CV_ISNAINI FATHUL JANNAH.pdf" style="border-radius: 30px; font-weight: 600; background: linear-gradient(135deg, #b1b493, #8f9273); border: none; box-shadow: 0 10px 20px rgba(143, 146, 115, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                Download CV <i class="fa fa-download ml-1"></i>
+              </a>
+            </div>
+
           </div>
-          <div class="col-md-6 col-lg-7 pl-md-4 pl-lg-5 py-5">
-            <div class="py-md-5">
+          <div class="col-md-6 col-lg-7 pl-md-4 pl-lg-5 pt-4 pb-5">
+            <div class="pt-md-3 pb-md-5">
               <div class="row justify-content-start pb-3">
                 <div class="col-md-12 heading-section ftco-animate">
-                  <span class="subheading">My Intro</span>
-                  <h2
-                    class="mb-4"
-                    style="font-size: 34px; text-transform: capitalize"
-                  >
-                    About Me
+                  <span class="subheading" style="color: #b1b493; font-weight: 700; letter-spacing: 2px;">HELLO THERE!</span>
+                  <h2 class="mb-4" style="font-size: 48px; font-weight: 800; font-family: 'Playfair Display', serif; font-style: italic; background: linear-gradient(90deg, #333, #b1b493); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Isnaini Fathul Jannah
                   </h2>
-                  <p style="text-align: justify; text-indent: 50px">
-                    Menjadi mahasiswa Teknologi Rekayasa Perangkat Lunak
+                  
+                  <div class="about-desc-card shadow-sm mb-4 p-4" style="background: rgba(177, 180, 147, 0.1); border-left: 4px solid #b1b493; border-radius: 0 12px 12px 0;">
+                    <p class="mb-0 text-dark" style="line-height: 1.8; font-size: 15px;">
+                      Menjadi mahasiswa Teknologi Rekayasa Perangkat Lunak
                     mengajarkan saya bahwa ketelitian dan logika adalah kunci.
                     Dengan latar belakang pendidikan di Politeknik Indonusa
                     Surakarta, saya telah mengembangkan berbagai proyek sistem
@@ -288,139 +172,45 @@
                     mana saya memadukan kemampuan teknis dengan dedikasi tinggi
                     untuk memberikan hasil terbaik dalam setiap tantangan yang
                     ada.
-                  </p>
+                    </p>
+                  </div>
 
-                  <ul
-                    class="about-info mt-4 px-md-0 px-2"
-                    style="list-style: none"
-                  >
-                    <!-- Baris Nama -->
-                    <li class="d-flex mb-3">
-                      <div
-                        style="width: 140px; font-weight: bold; flex-shrink: 0"
-                      >
-                        Nama
+                  <div class="contact-grid mb-4">
+                    <div class="contact-item d-flex align-items-center mb-3">
+                      <div class="icon-box d-flex justify-content-center align-items-center rounded-circle mr-3" style="width: 40px; height: 40px; background: #f1f2eb; color: #b1b493;"><i class="fa fa-calendar"></i></div>
+                      <div class="info d-flex flex-column">
+                        <span class="label text-muted" style="font-size: 12px; font-weight: 600; text-transform: uppercase;">Tanggal Lahir</span>
+                        <span class="value font-weight-bold text-dark">27 Mei 2005</span>
                       </div>
-                      <div style="width: 20px">:</div>
-                      <div style="color: #999">Isnaini Fathul Jannah</div>
-                    </li>
-                    <!-- Baris Tanggal Lahir -->
-                    <li class="d-flex mb-3">
-                      <div
-                        style="width: 140px; font-weight: bold; flex-shrink: 0"
-                      >
-                        Tanggal Lahir
+                    </div>
+                    <div class="contact-item d-flex align-items-center mb-3">
+                      <div class="icon-box d-flex justify-content-center align-items-center rounded-circle mr-3" style="width: 40px; height: 40px; background: #f1f2eb; color: #b1b493;"><i class="fa fa-map-marker"></i></div>
+                      <div class="info d-flex flex-column">
+                        <span class="label text-muted" style="font-size: 12px; font-weight: 600; text-transform: uppercase;">Lokasi</span>
+                        <span class="value font-weight-bold text-dark">Colomadu, Karanganyar</span>
                       </div>
-                      <div style="width: 20px">:</div>
-                      <div style="color: #999">27 Mei, 2005</div>
-                    </li>
-                    <!-- Baris Alamat -->
-                    <li class="d-flex mb-3">
-                      <div
-                        style="width: 140px; font-weight: bold; flex-shrink: 0"
-                      >
-                        Alamat
+                    </div>
+                    <div class="contact-item d-flex align-items-center mb-3">
+                      <a href="mailto:isnainiani8507@gmail.com" class="icon-box d-flex justify-content-center align-items-center rounded-circle mr-3 interactive-icon" style="width: 40px; height: 40px; background: #f1f2eb; color: #b1b493; text-decoration: none;"><i class="fa fa-envelope"></i></a>
+                      <div class="info d-flex flex-column">
+                        <span class="label text-muted" style="font-size: 12px; font-weight: 600; text-transform: uppercase;">Email</span>
+                        <span class="value font-weight-bold"><a href="mailto:isnainiani8507@gmail.com" class="text-dark">isnainiani8507@gmail.com</a></span>
                       </div>
-                      <div style="width: 20px">:</div>
-                      <div style="color: #999">
-                        Paulan Timur, RT.03/RW.03, Colomadu, Karanganyar
+                    </div>
+                    <div class="contact-item d-flex align-items-center mb-3">
+                      <a href="https://wa.me/6281326260457" target="_blank" class="icon-box d-flex justify-content-center align-items-center rounded-circle mr-3 interactive-icon" style="width: 40px; height: 40px; background: #f1f2eb; color: #b1b493; text-decoration: none;"><i class="fa fa-whatsapp"></i></a>
+                      <div class="info d-flex flex-column">
+                        <span class="label text-muted" style="font-size: 12px; font-weight: 600; text-transform: uppercase;">WhatsApp</span>
+                        <span class="value font-weight-bold"><a href="https://wa.me/6281326260457" target="_blank" class="text-dark">0813-2626-0457</a></span>
                       </div>
-                    </li>
-                    <!-- Baris Kode Pos -->
-                    <li class="d-flex mb-3">
-                      <div
-                        style="width: 140px; font-weight: bold; flex-shrink: 0"
-                      >
-                        Kode Pos
-                      </div>
-                      <div style="width: 20px">:</div>
-                      <div style="color: #999">57173</div>
-                    </li>
+                    </div>
+                  </div>
 
-                    <!-- Baris Email -->
-                    <li class="d-flex align-items-center mb-3">
-                      <div
-                        style="width: 140px; font-weight: bold; flex-shrink: 0"
-                      >
-                        Email
-                      </div>
-                      <div style="width: 20px">:</div>
-                      <div style="color: #999999; margin-right: 15px">
-                        isnainiani8507@gmail.com
-                      </div>
-                      <a
-                        href="mailto:isnainiani8507@gmail.com"
-                        class="btn btn-primary"
-                        style="
-                          font-size: 12px;
-                          padding: 5px 15px;
-                          white-space: nowrap;
-                          margin-left: auto;
-                        "
-                        >Kirim Email</a
-                      >
-                    </li>
-
-                    <!-- Baris Telepon -->
-                    <li class="d-flex align-items-center mb-3">
-                      <div
-                        style="width: 140px; font-weight: bold; flex-shrink: 0"
-                      >
-                        Telepon
-                      </div>
-                      <div style="width: 20px">:</div>
-                      <div style="color: #999; margin-right: 15px">
-                        0813-2626-0457
-                      </div>
-                      <a
-                        href="https://wa.me/6281326260457"
-                        target="_blank"
-                        class="btn btn-success"
-                        style="
-                          font-size: 12px;
-                          padding: 5px 15px;
-                          white-space: nowrap;
-                          margin-left: auto;
-                        "
-                        >WhatsApp</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-12">
-                  <div class="my-interest d-lg-flex w-100">
-                    <div class="interest-wrap d-flex align-items-center">
-                      <div
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <span class="flaticon-listening"></span>
-                      </div>
-                      <div class="text">Music</div>
-                    </div>
-                    <div class="interest-wrap d-flex align-items-center">
-                      <div
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <span class="flaticon-web-programming"></span>
-                      </div>
-                      <div class="text">Learn</div>
-                    </div>
-                    <div class="interest-wrap d-flex align-items-center">
-                      <div
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <span class="flaticon-video-player"></span>
-                      </div>
-                      <div class="text">Movie</div>
-                    </div>
-                    <div class="interest-wrap d-flex align-items-center">
-                      <div
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <span class="flaticon-computer"></span>
-                      </div>
-                      <div class="text">Design</div>
-                    </div>
+                  <div class="interests-container mb-5 d-flex flex-wrap">
+                    <span class="interest-badge px-3 py-2 mr-2 mb-2 rounded-pill shadow-sm" style="background: #fff; border: 1px solid #eee; font-size: 13px; font-weight: 600;"><i class="fa fa-headphones mr-2" style="color: #b1b493;"></i>Music</span>
+                    <span class="interest-badge px-3 py-2 mr-2 mb-2 rounded-pill shadow-sm" style="background: #fff; border: 1px solid #eee; font-size: 13px; font-weight: 600;"><i class="fa fa-book mr-2" style="color: #b1b493;"></i>Learn</span>
+                    <span class="interest-badge px-3 py-2 mr-2 mb-2 rounded-pill shadow-sm" style="background: #fff; border: 1px solid #eee; font-size: 13px; font-weight: 600;"><i class="fa fa-film mr-2" style="color: #b1b493;"></i>Movie</span>
+                    <span class="interest-badge px-3 py-2 mr-2 mb-2 rounded-pill shadow-sm" style="background: #fff; border: 1px solid #eee; font-size: 13px; font-weight: 600;"><i class="fa fa-paint-brush mr-2" style="color: #b1b493;"></i>Design</span>
                   </div>
                 </div>
               </div>
@@ -429,6 +219,191 @@
         </div>
       </div>
     </section>
+
+    <style>
+      .hero-new-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      @media (max-width: 991.98px) {
+        .hero-new-section {
+          padding-top: 120px;
+          min-height: auto;
+          padding-bottom: 50px;
+        }
+      }
+
+      /* Interactive Tech Container */
+      .interactive-tech-container {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: -15px; /* Shift to left */
+        margin-top: -80px; /* Shift upwards */
+      }
+
+      @media (max-width: 767px) {
+        .interactive-tech-container {
+          margin-top: 20px;
+          margin-left: 0;
+        }
+      }
+
+      .interactive-icon {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+      }
+      .interactive-icon:hover {
+        transform: scale(1.15) rotate(5deg);
+        box-shadow: 0 5px 15px rgba(177, 180, 147, 0.4);
+        background-color: #b1b493 !important;
+        color: #fff !important;
+      }
+
+      .btn-custom:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(177, 180, 147, 0.5) !important;
+      }
+
+      .tech-sphere {
+        width: 280px;
+        height: 380px;
+        border-radius: 140px 140px 30px 30px; /* Modern arch shape */
+        background-color: #b1b493;
+        background-image: url('images/3-3.jpg');
+        background-size: cover;
+        background-position: center top;
+        border: 4px solid #b1b493;
+        box-shadow: 0 0 40px rgba(177, 180, 147, 0.4), inset 0 0 30px rgba(0,0,0,0.2);
+        position: absolute;
+        animation: float 6s ease-in-out infinite;
+        z-index: 1;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      
+      @media (max-width: 576px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .tech-orbit {
+        position: absolute;
+        width: 440px;
+        height: 440px;
+        border: 1px dashed rgba(177, 180, 147, 0.4);
+        border-radius: 50%;
+        animation: spin 20s linear infinite;
+        z-index: 2;
+      }
+
+      .orbit-item {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        font-size: 20px;
+        animation: counter-spin 20s linear infinite;
+      }
+
+      .html-badge { top: -25px; left: 50%; transform: translateX(-50%); color: #E34F26; }
+      .css-badge { bottom: -25px; left: 50%; transform: translateX(-50%); color: #1572B6; }
+      .js-badge { left: -25px; top: 50%; transform: translateY(-50%); color: #F7DF1E; font-size: 16px; }
+      .php-badge { right: -25px; top: 50%; transform: translateY(-50%); color: #777BB4; font-size: 14px; }
+
+      .code-typing-box {
+        position: absolute;
+        bottom: 20px;
+        right: -30px;
+        width: 260px;
+        background: #1e1e1e;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 3;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 13px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        animation: float-delayed 7s ease-in-out infinite;
+      }
+      
+      @media (max-width: 767.98px) {
+        .interactive-tech-container {
+           height: 350px;
+           margin-bottom: 30px;
+        }
+        .code-typing-box {
+           right: 10px;
+           width: 240px;
+           bottom: 10px;
+        }
+      }
+
+      .code-header {
+        background: #2d2d2d;
+        padding: 8px 12px;
+        display: flex;
+        gap: 6px;
+      }
+      .code-header .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .dot.red { background: #ff5f56; }
+      .dot.yellow { background: #ffbd2e; }
+      .dot.green { background: #27c93f; }
+
+      .code-body {
+        padding: 15px;
+        color: #fff;
+        line-height: 1.6;
+      }
+      .code-line { display: block; }
+      .code-line.indent { padding-left: 20px; }
+      .keyword { color: #c678dd; }
+      .func { color: #61afef; }
+      .string { color: #98c379; }
+      .code-cursor {
+        display: inline-block;
+        width: 8px;
+        height: 15px;
+        background: #fff;
+        animation: blink 1s step-end infinite;
+      }
+
+      @keyframes spin { 100% { transform: rotate(360deg); } }
+      @keyframes counter-spin { 100% { transform: rotate(-360deg); } }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+      @keyframes float-delayed { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+      /* Responsive text fixes */
+      @media (max-width: 768px) {
+        .about-info li { flex-wrap: wrap; }
+        .about-info li a { margin-top: 10px; margin-left: 0 !important; width: 100%; text-align: center; }
+        h2.mb-4 { font-size: 28px !important; }
+      }
+    </style>
 
     <style>
       .btn-primary { transition: all 0.3s ease; }
