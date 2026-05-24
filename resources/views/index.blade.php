@@ -33,6 +33,7 @@
         background: #fff !important;
         box-shadow: 0 5px 20px -5px rgba(0,0,0,0.1) !important;
         top: 0 !important;
+        z-index: 9999 !important;
       }
       .ftco-navbar-light .navbar-nav > li > a { color: #000 !important; font-weight: 600; }
       .ftco-navbar-light .navbar-nav > li > a:hover,
@@ -144,7 +145,7 @@
               </div>
             </div>
 
-            <div class="action-buttons text-center w-100 mt-4 mb-5 mb-md-0" style="z-index: 10;">
+            <div class="action-buttons text-center w-100 mt-4 mb-5 mb-md-0">
               <a href="#contact-section" class="btn btn-primary btn-custom py-3 px-4 mr-2 mb-2" style="border-radius: 30px; font-weight: 600; box-shadow: 0 10px 20px rgba(177, 180, 147, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">Hire Me</a>
               <a href="{{ asset('CV_ISNAINI FATHUL JANNAH.pdf') }}" class="btn btn-custom py-3 px-4 mb-2 text-white" download="CV_ISNAINI FATHUL JANNAH.pdf" style="border-radius: 30px; font-weight: 600; background: linear-gradient(135deg, #b1b493, #8f9273); border: none; box-shadow: 0 10px 20px rgba(143, 146, 115, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                 Download CV <i class="fa fa-download ml-1"></i>
